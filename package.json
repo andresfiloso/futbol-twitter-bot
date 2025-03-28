@@ -1,0 +1,16 @@
+{
+  "name": "futbol-twitter-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env  index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cron": "^4.1.3",
+    "twitter-api-v2": "^1.22.0"
+  }
+}

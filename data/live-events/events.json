@@ -1,0 +1,162 @@
+{
+  "edbjhdh-36'-4-san-lorenzo-4": {
+    "id": "edbjhdh",
+    "url": "san-lorenzo-vs-lanus",
+    "team1": "San Lorenzo",
+    "team2": "Lanús",
+    "event": {
+      "time": "36'",
+      "type": 4,
+      "team_name": "San Lorenzo",
+      "team_slug": "san-lorenzo",
+      "texts": [
+        "Jhohan Romaña"
+      ],
+      "player_jersey_num": 4
+    }
+  },
+  "edbjhdh-45'+1-4-san-lorenzo-15": {
+    "id": "edbjhdh",
+    "url": "san-lorenzo-vs-lanus",
+    "team1": "San Lorenzo",
+    "team2": "Lanús",
+    "event": {
+      "time": "45'+1",
+      "type": 4,
+      "team_name": "San Lorenzo",
+      "team_slug": "san-lorenzo",
+      "texts": [
+        "Emanuel Cecchini"
+      ],
+      "player_jersey_num": 15
+    }
+  },
+  "edbjhdh-62'-4-lanus-2": {
+    "id": "edbjhdh",
+    "url": "san-lorenzo-vs-lanus",
+    "team1": "San Lorenzo",
+    "team2": "Lanús",
+    "event": {
+      "time": "62'",
+      "type": 4,
+      "team_name": "Lanús",
+      "team_slug": "lanus",
+      "texts": [
+        "Ezequiel Munoz"
+      ],
+      "player_jersey_num": 2
+    }
+  },
+  "edbjhdh-65'-1-san-lorenzo-10": {
+    "id": "edbjhdh",
+    "url": "san-lorenzo-vs-lanus",
+    "team1": "San Lorenzo",
+    "team2": "Lanús",
+    "event": {
+      "time": "65'",
+      "type": 1,
+      "team_name": "San Lorenzo",
+      "team_slug": "san-lorenzo",
+      "texts": [
+        "Iker Muniain"
+      ],
+      "player_jersey_num": 10
+    }
+  },
+  "edbjhdh-79'-4-san-lorenzo-5": {
+    "id": "edbjhdh",
+    "url": "san-lorenzo-vs-lanus",
+    "team1": "San Lorenzo",
+    "team2": "Lanús",
+    "event": {
+      "time": "79'",
+      "type": 4,
+      "team_name": "San Lorenzo",
+      "team_slug": "san-lorenzo",
+      "texts": [
+        "Elián Irala"
+      ],
+      "player_jersey_num": 5
+    }
+  },
+  "edbjhdh-79'-4-lanus-23": {
+    "id": "edbjhdh",
+    "url": "san-lorenzo-vs-lanus",
+    "team1": "San Lorenzo",
+    "team2": "Lanús",
+    "event": {
+      "time": "79'",
+      "type": 4,
+      "team_name": "Lanús",
+      "team_slug": "lanus",
+      "texts": [
+        "Ramiro Carrera"
+      ],
+      "player_jersey_num": 23
+    }
+  },
+  "edbjhed-12'-4-huracan-10": {
+    "id": "edbjhed",
+    "url": "banfield-vs-huracan",
+    "team1": "Banfield",
+    "team2": "Huracán",
+    "event": {
+      "time": "12'",
+      "type": 4,
+      "team_name": "Huracán",
+      "team_slug": "huracan",
+      "texts": [
+        "Walter Mazzantti"
+      ],
+      "player_jersey_num": 10
+    }
+  },
+  "edbjhed-19'-4-huracan-25": {
+    "id": "edbjhed",
+    "url": "banfield-vs-huracan",
+    "team1": "Banfield",
+    "team2": "Huracán",
+    "event": {
+      "time": "19'",
+      "type": 4,
+      "team_name": "Huracán",
+      "team_slug": "huracan",
+      "texts": [
+        "César Ibáñez"
+      ],
+      "player_jersey_num": 25
+    }
+  },
+  "edbjhed-44'-4-banfield-40": {
+    "id": "edbjhed",
+    "url": "banfield-vs-huracan",
+    "team1": "Banfield",
+    "team2": "Huracán",
+    "event": {
+      "time": "44'",
+      "type": 4,
+      "team_name": "Banfield",
+      "team_slug": "banfield",
+      "texts": [
+        "Paul Riveros"
+      ],
+      "player_jersey_num": 40
+    }
+  },
+  "edbjhed-75'-4-banfield-5": {
+    "id": "edbjhed",
+    "url": "banfield-vs-huracan",
+    "team1": "Banfield",
+    "team2": "Huracán",
+    "event": {
+      "time": "75'",
+      "type": 4,
+      "team_name": "Banfield",
+      "team_slug": "banfield",
+      "texts": [
+        "Martín Río"
+      ],
+      "player_jersey_num": 5
+    }
+  }
+}

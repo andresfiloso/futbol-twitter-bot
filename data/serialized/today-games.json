@@ -1,0 +1,47 @@
+[
+  {
+    "id": "edbjhee",
+    "status": {
+      "enum": 3,
+      "name": "Finalizado",
+      "short_name": "Final",
+      "symbol_name": "Fin"
+    }
+  },
+  {
+    "id": "edbjhdh",
+    "status": {
+      "enum": 2,
+      "name": "Primer Tiempo",
+      "short_name": "1°",
+      "symbol_name": "1°"
+    }
+  },
+  {
+    "id": "edbjhed",
+    "status": {
+      "enum": 2,
+      "name": "Primer Tiempo",
+      "short_name": "1°",
+      "symbol_name": "1°"
+    }
+  },
+  {
+    "id": "edbjhdi",
+    "status": {
+      "enum": 1,
+      "name": "Prog.",
+      "short_name": "Prog.",
+      "symbol_name": "Prog."
+    }
+  },
+  {
+    "id": "edbjheb",
+    "status": {
+      "enum": 1,
+      "name": "Prog.",
+      "short_name": "Prog.",
+      "symbol_name": "Prog."
+    }
+  }
+]

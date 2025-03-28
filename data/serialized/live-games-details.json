@@ -1,0 +1,47 @@
+{
+  "edbjhdh-36'-4-san-lorenzo-4": {
+    "id": "edbjhdh",
+    "url": "san-lorenzo-vs-lanus",
+    "team1": "San Lorenzo",
+    "team2": "Lanús",
+    "event": {
+      "time": "36'",
+      "type": 4,
+      "team": "san-lorenzo",
+      "texts": [
+        "Jhohan Romaña"
+      ],
+      "player_jersey_num": 4
+    }
+  },
+  "edbjhed-12'-4-huracan-10": {
+    "id": "edbjhed",
+    "url": "banfield-vs-huracan",
+    "team1": "Banfield",
+    "team2": "Huracán",
+    "event": {
+      "time": "12'",
+      "type": 4,
+      "team": "huracan",
+      "texts": [
+        "Walter Mazzantti"
+      ],
+      "player_jersey_num": 10
+    }
+  },
+  "edbjhed-19'-4-huracan-25": {
+    "id": "edbjhed",
+    "url": "banfield-vs-huracan",
+    "team1": "Banfield",
+    "team2": "Huracán",
+    "event": {
+      "time": "19'",
+      "type": 4,
+      "team": "huracan",
+      "texts": [
+        "César Ibáñez"
+      ],
+      "player_jersey_num": 25
+    }
+  }
+}
