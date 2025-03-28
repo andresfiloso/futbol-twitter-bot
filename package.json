@@ -2,6 +2,7 @@
   "name": "futbol-twitter-bot",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start:local": "node --env-file=.env  index.js",
     "start:prod": "node index.js",
