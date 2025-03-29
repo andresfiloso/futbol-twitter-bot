@@ -1,6 +1,5 @@
 export const PROMIEDOS_BASE_URL = "https://api.promiedos.com.ar"
 
-
 export const GAME_STATUS = {
     SCHEDULED: {
         ENUM: 1,
@@ -24,7 +23,7 @@ export const GAME_STATUS = {
     }
 }
 
-export const EVENTS_TYPES = {
+export const EVENT = {
     GOAL: {
         TYPE: 1,
         NAME: 'Gol'

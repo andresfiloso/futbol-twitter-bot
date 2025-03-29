@@ -1,18 +1,22 @@
 {
   "name": "futbol-twitter-bot",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/cron.js",
   "scripts": {
-    "start:local": "node --env-file=.env  index.js",
-    "start:prod": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:cron": "tsx watch --env-file=.env src/cron.ts",
+    "build:cron": "tsc --project tsconfig.build.json",
+    "start:cron": "node --env-file=.env dist/cron.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "cron": "^4.1.3",
-    "twitter-api-v2": "^1.22.0"
+    "twitter-api-v2": "^1.22.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "typescript": "^5.8.2"
   }
 }
