@@ -1,4 +1,3 @@
-import { readJsonFile, writeObjectToFile } from '../lib/file';
 import { upsertLiveEvent } from '../services/live-event';
 import { getLiveEvents } from '../services/promiedos';
 import { createTweet, generateTweetContent } from '../services/twitter';
