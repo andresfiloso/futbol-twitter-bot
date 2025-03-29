@@ -55,11 +55,7 @@ export const getLiveEvents = async ({
     liveGames.map((game) => client.getGameCenter(game.id))
   );
 
-  const eventTypes = [
-    EVENT.GOAL.TYPE,
-    EVENT.YELLOW_CARD.TYPE,
-    EVENT.RED_CARD.TYPE,
-  ];
+  const eventTypes = [EVENT.YELLOW_CARD.TYPE, EVENT.RED_CARD.TYPE];
 
   return liveGameDetails.flatMap(({ game }) => {
     const teams = game.teams;

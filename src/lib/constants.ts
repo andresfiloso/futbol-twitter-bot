@@ -28,6 +28,10 @@ export const EVENT = {
     TYPE: 1,
     NAME: 'Gol',
   },
+  GOAL_OWN: {
+    TYPE: 2,
+    NAME: 'Gol en contra',
+  },
   YELLOW_CARD: {
     TYPE: 4,
     NAME: 'Tarjeta Amarilla',

@@ -23,6 +23,7 @@ export const generateTweetContent = ({
 }: LiveEvent): string => {
   const eventLabel = {
     [EVENT.GOAL.TYPE]: '⚽️ Gol de ',
+    [EVENT.GOAL_OWN.TYPE]: '🤦 Gol en contra de ',
     [EVENT.YELLOW_CARD.TYPE]: '🟨 Tarjeta Amarilla para ',
     [EVENT.RED_CARD.TYPE]: '🟥 Tarjeta Roja para ',
   };
