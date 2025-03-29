@@ -14,19 +14,22 @@ export type LiveEvent = {
   event_player_jersey_num: number;
 };
 
-const LiveEventSchema = new Schema({
-  key: { type: String, required: true },
-  game_id: { type: String, required: true },
-  game_url: { type: String },
-  team1: { type: String },
-  team2: { type: String },
-  event_time: { type: String },
-  event_type: { type: Number },
-  event_team_name: { type: String },
-  event_team_slug: { type: String },
-  event_texts: { type: [String] },
-  event_player_jersey_num: { type: Number },
-});
+const LiveEventSchema = new Schema(
+  {
+    key: { type: String, required: true },
+    game_id: { type: String, required: true },
+    game_url: { type: String },
+    team1: { type: String },
+    team2: { type: String },
+    event_time: { type: String },
+    event_type: { type: Number },
+    event_team_name: { type: String },
+    event_team_slug: { type: String },
+    event_texts: { type: [String] },
+    event_player_jersey_num: { type: Number },
+  },
+  { timestamps: true }
+);
 
 LiveEventSchema.index({ key: 1 }, { unique: true });
 
