@@ -9,8 +9,9 @@ export const createTweet = async (text: string) => {
     return;
   }
   const client = twitterClient();
+  console.log('Creating tweet > ', text);
   await client.v2.tweet(text);
-  console.log('Tweet created > ', text);
+  console.log('Tweet created');
 };
 
 export const generateTweetContent = ({
