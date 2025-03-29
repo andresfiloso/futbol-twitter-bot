@@ -33,21 +33,22 @@ type GetLiveEventsProps = {
 };
 
 export type LiveEvent = {
-  id: string;
-  url: string;
+  key: string;
+  game_id: string;
+  game_url: string;
   team1: string;
   team2: string;
   event_time: string;
   event_type: number;
   event_team_name: string;
   event_team_slug: string;
-  event_player_jersey_num: number;
   event_texts: string[];
+  event_player_jersey_num: number;
 };
 
 export const getLiveEvents = async ({
   league_name,
-}: GetLiveEventsProps = {}): Promise<Record<string, LiveEvent>> => {
+}: GetLiveEventsProps = {}): Promise<LiveEvent[]> => {
   const liveGames = await getLiveGames({ league_name });
 
   const liveGameDetails = await Promise.all(
@@ -60,33 +61,43 @@ export const getLiveEvents = async ({
     EVENT.RED_CARD.TYPE,
   ];
 
-  return liveGameDetails
-    .flatMap(({ game }) => {
-      const teams = game.teams;
+  return liveGameDetails.flatMap(({ game }) => {
+    const teams = game.teams;
 
-      if (!game.events) return [];
+    if (!game.events) return [];
 
-      return game.events
-        .flatMap((event) => event.rows)
-        .flatMap((row) => row.events)
-        .filter((event) => eventTypes.includes(event.type))
-        .map((event) => ({
-          id: game.id,
-          url: game.url_name,
-          team1: teams[0].name,
-          team2: teams[1].name,
-          event_time: event.time,
-          event_type: event.type,
-          event_team_name: event.team === 1 ? teams[0].name : teams[1].name,
-          event_team_slug:
-            event.team === 1 ? teams[0].url_name : teams[1].url_name,
-          event_texts: event.texts,
-          event_player_jersey_num: event.player_jersey_num,
-        }));
-    })
-    .reduce((acc: Record<string, LiveEvent>, event) => {
-      const key = `${event.id}-${event.event_time}-${event.event_type}-${event.event_team_slug}-${event.event_player_jersey_num}`;
-      acc[key] = event;
-      return acc;
-    }, {});
+    return game.events
+      .flatMap((event) => event.rows)
+      .flatMap((row) => row.events)
+      .filter((event) => eventTypes.includes(event.type))
+      .map((event) => {
+        const game_id = game.id;
+        const game_url = game.url_name;
+        const team1 = teams[0].name;
+        const team2 = teams[1].name;
+        const event_time = event.time;
+        const event_type = event.type;
+        const event_texts = event.texts;
+        const event_team_name =
+          event.team === 1 ? teams[0].name : teams[1].name;
+        const event_team_slug =
+          event.team === 1 ? teams[0].url_name : teams[1].url_name;
+        const event_player_jersey_num = event.player_jersey_num;
+        const key = `${game_id}-${event_time}-${event_type}-${event_team_slug}-${event.player_jersey_num}`;
+
+        return {
+          key,
+          game_id,
+          game_url,
+          team1,
+          team2,
+          event_time,
+          event_type,
+          event_team_name,
+          event_team_slug,
+          event_texts,
+          event_player_jersey_num,
+        };
+      });
+  });
 };

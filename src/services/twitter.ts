@@ -5,11 +5,11 @@ import { LiveEvent } from './promiedos';
 
 export const createTweet = async (text: string) => {
   if (!ENV.X_ENABLED) {
-    console.log('Twitter is disabled');
+    console.log('Twitter is disabled >', text);
     return;
   }
   const client = twitterClient();
-  client.v2.tweet(text);
+  await client.v2.tweet(text);
   console.log('Tweet created > ', text);
 };
 

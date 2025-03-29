@@ -1,19 +1,22 @@
 import { CronJob } from 'cron';
 import { ENV } from './lib/env';
 import { processLiveEvents } from './jobs/process-live-events';
+import { bootstrap } from './bootstrap';
 
-console.log('CRON IS UP', ENV.CRON_SCHEDULE);
-console.log('X_ENABLED', ENV.X_ENABLED);
+(async () => {
+  await bootstrap();
 
-const job = new CronJob(
-  ENV.CRON_SCHEDULE,
-  () => {
-    console.log('STARTING CRON JOB');
-    processLiveEvents({ league_name: 'Liga Profesional Argentina' });
-  },
-  null,
-  false,
-  'America/Argentina/Buenos_Aires'
-);
+  const job = new CronJob(
+    ENV.CRON_SCHEDULE,
+    () => {
+      console.log('STARTING CRON JOB');
+      processLiveEvents({ league_name: 'Primera Nacional' });
+    },
+    null,
+    false,
+    'America/Argentina/Buenos_Aires'
+  );
 
-job.start();
+  job.start();
+  console.log('CRON IS UP', ENV.CRON_SCHEDULE);
+})();
