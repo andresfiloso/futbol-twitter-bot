@@ -7,7 +7,8 @@
     "dev": "tsx watch --env-file=.env src/index.ts",
     "build:cron": "tsc --project tsconfig.build.json",
     "start:cron": "node dist/cron.js",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -19,11 +20,14 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.23.0",
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.14",
+    "eslint": "^9.23.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.3.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.28.0"
   }
 }
