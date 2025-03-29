@@ -27,4 +27,4 @@ COPY --from=build /app ./
 EXPOSE 3000
 
 # Start the application
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/cron.js"]
