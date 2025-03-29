@@ -36,7 +36,7 @@ const getLiveEvents = async ({ league_name } = {}) => {
         return;
     }
 
-    console.log('liveGames', liveGames.length);
+    console.log('liveGames', liveGames);
 
     const liveGameDetails = await Promise.all(liveGames.map(game => client.getGameCenter(game.id)));
 
@@ -80,7 +80,7 @@ const getLiveEvents = async ({ league_name } = {}) => {
     for (const key in currentEvents) {
         if (!alreadyStoredEvents[key]) {
             console.log('NOTIFY NEW EVENT', key);
-            // createTweet(buildTweetContent(currentEvents[key]))
+            createTweet(buildTweetContent(currentEvents[key]))
         }
     }
 
@@ -101,18 +101,18 @@ const buildTweetContent = ({ team1, team2, event }) => {
     return text;
 }
 
-// const CRON_SCHEDULE = '* * * * *';
+const CRON_SCHEDULE = '* * * * *';
 
 
-// new CronJob(
-//     CRON_SCHEDULE, // cronTime
-//     function () {
-//         console.log('You will see this message every', CRON_SCHEDULE);
-//         getLiveEvents({ league_name: 'Liga Profesional Argentina' })
-//     }, // onTick
-//     null, // onComplete
-//     true, // start
-//     'America/Argentina/Buenos_Aires' // timeZone
-// );
+new CronJob(
+    CRON_SCHEDULE, // cronTime
+    function () {
+        console.log('You will see this message every', CRON_SCHEDULE);
+        getLiveEvents({ league_name: 'Liga Profesional Argentina' })
+    }, // onTick
+    null, // onComplete
+    true, // start
+    'America/Argentina/Buenos_Aires' // timeZone
+);
 
-getLiveEvents({ league_name: 'Liga Profesional Argentina' })
+// getLiveEvents({ league_name: 'Liga Profesional Argentina' })
