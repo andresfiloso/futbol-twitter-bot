@@ -1,23 +1,30 @@
-# Use Node.js 22 Alpine as the base image
-FROM node:22-alpine
+# Use a lightweight Node.js image
+FROM node:22.11.0-alpine AS build
 
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy lockfile and package.json
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install all dependencies
+RUN npm ci
 
-# Copy the rest of the application code
+# Copy source files and build the application
 COPY . .
-
-# Build the application
 RUN npm run build:cron
 
-# Expose the port the app runs on
+# Use a minimal runtime image
+FROM node:22.11.0-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy only the production artifacts from the build stage
+COPY --from=build /app ./
+
+# Expose the application port
 EXPOSE 3000
 
-# Command to run the application
-CMD ["node", "dist/index.js"]
+# Start the application
+CMD ["node", "dist/server.js"]
