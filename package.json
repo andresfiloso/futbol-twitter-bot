@@ -5,7 +5,8 @@
   "scripts": {
     "dev:cron": "tsx watch --env-file=.env src/cron.ts",
     "build:cron": "tsc --project tsconfig.build.json",
-    "start:cron": "node dist/cron.js"
+    "start:cron": "node dist/cron.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +17,11 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.13.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.0",
     "typescript": "^5.8.2"
   }
 }
