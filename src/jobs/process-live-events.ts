@@ -13,6 +13,11 @@ export const processLiveEvents = async ({
 
   const liveEvents = await getLiveEvents({ league_name });
 
+  if (!Object.keys(liveEvents).length) {
+    console.log('No live events found');
+    return;
+  }
+
   // check if the event is already stored
   // if not, create a tweet before storing it
   for (const key in liveEvents) {
