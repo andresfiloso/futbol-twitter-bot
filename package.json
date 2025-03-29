@@ -5,7 +5,7 @@
   "scripts": {
     "dev:cron": "tsx watch --env-file=.env src/cron.ts",
     "build:cron": "tsc --project tsconfig.build.json",
-    "start:cron": "node --env-file=.env dist/cron.js"
+    "start:cron": "node dist/cron.js"
   },
   "author": "",
   "license": "ISC",
