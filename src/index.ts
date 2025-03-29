@@ -3,5 +3,5 @@ import { bootstrap } from './bootstrap';
 
 (async () => {
   await bootstrap();
-  processLiveEvents({ league_name: 'Primera Nacional' });
+  processLiveEvents({ league_name: 'Liga Profesional Argentina' });
 })();
