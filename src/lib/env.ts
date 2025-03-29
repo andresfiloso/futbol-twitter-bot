@@ -5,7 +5,7 @@ const envSchema = z.object({
   X_APP_SECRET: z.string(),
   X_ACCESS_TOKEN: z.string(),
   X_ACCESS_SECRET: z.string(),
-  X_ENABLED: z.coerce.boolean(),
+  X_ENABLED: z.string().transform((val) => val.toLowerCase() === 'true'),
   CRON_SCHEDULE: z.string(),
 });
 
