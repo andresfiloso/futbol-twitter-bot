@@ -36,7 +36,7 @@ const getLiveEvents = async ({ league_name } = {}) => {
         return;
     }
 
-    console.log('liveGames', liveGames);
+    console.log('liveGames', liveGames.length);
 
     const liveGameDetails = await Promise.all(liveGames.map(game => client.getGameCenter(game.id)));
 
