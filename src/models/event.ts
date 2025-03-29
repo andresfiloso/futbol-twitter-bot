@@ -30,4 +30,4 @@ const LiveEventSchema = new Schema({
 
 LiveEventSchema.index({ key: 1 }, { unique: true });
 
-export const LiveEventModel = model<LiveEvent>('Buy', LiveEventSchema);
+export const LiveEventModel = model<LiveEvent>('LiveEvent', LiveEventSchema);
