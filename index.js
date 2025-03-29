@@ -97,7 +97,7 @@ const buildTweetContent = ({ team1, team2, event }) => {
         [EVENTS_TYPES.RED_CARD.TYPE]: '🟥 Tarjeta Roja para '
     }
 
-    const text = `${eventLabel[type]}${texts[0]} en el partido ${team1} vs ${team2} a los ${time} del ${type === EVENTS_TYPES.GOAL.TYPE ? 'primer' : 'segundo'} tiempo.`
+    const text = `${eventLabel[type]}${texts[0]} en el partido ${team1} vs ${team2} a los ${time}`
     return text;
 }
 
