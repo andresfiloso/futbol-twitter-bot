@@ -10,7 +10,7 @@ import { bootstrap } from './bootstrap';
     ENV.CRON_SCHEDULE,
     () => {
       console.log('STARTING CRON JOB');
-      processLiveEvents({ league_name: 'Primera Nacional' });
+      processLiveEvents({ league_name: 'Liga Profesional Argentina' });
     },
     null,
     false,
